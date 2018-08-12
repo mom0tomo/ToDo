@@ -11,5 +11,5 @@ import (
 func index(w http.ResponseWriter, r *http.Request) {
 	ctx := appengine.NewContext(r)
 	log.Infof(ctx, "Hello, 世界")
-	fmt.Println(w, "Hello, World")
+	fmt.Fprintln(w, "Hello, World")
 }
